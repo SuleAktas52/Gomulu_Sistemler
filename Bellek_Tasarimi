@@ -1,0 +1,19 @@
+module dual_port_ram(
+    input clk, // saat sinyali
+    input [3:0] addr, // adres sinyali
+    input [15:0] din, // veri giriş sinyali
+    input we, // yazma kontrol sinyali
+    output [15:0] dout // veri çıkış sinyali
+);
+
+    reg [15:0] memory [0:15]; // 16 x 16 bellek tanımlaması
+
+    assign dout = (we) ? {16{1'b0}} : memory[addr]; // Düşen kenarda yazma, yükselen kenarda okuma
+
+    always @(posedge clk) begin
+        if (we) begin
+            memory[addr] <= din;
+        end
+    end
+
+endmodule
