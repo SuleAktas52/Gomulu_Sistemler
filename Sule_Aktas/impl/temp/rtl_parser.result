@@ -1,0 +1,10 @@
+[
+ {
+  "InstFile" : "C:/Users/AktasSule/Documents/projefpga/src/fpga.v",
+  "InstLine" : 1,
+  "InstName" : "LED_Controller",
+  "ModuleFile" : "C:/Users/AktasSule/Documents/projefpga/src/fpga.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "LED_Controller"
+ }
+]
